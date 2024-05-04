@@ -1,9 +1,11 @@
 import com.google.gson.Gson;
 import java.io.FileReader;
+import java.util.Scanner;
 
 public class Programa {
 	public static void main(String[] args) {
 		
+		Scanner scanner = new Scanner(System.in);
 		Gson json = new Gson();
 		Agenda agenda = new Agenda();
 		
@@ -16,9 +18,17 @@ public class Programa {
 			System.out.print(e.getMessage());
 		}
 		
-		for(Pessoa pessoa : agenda.getContatos()) {
-			System.out.println(pessoa.getNome()+ " " + pessoa.getContato());
+		System.out.print("Buscar: ");
+		String nome = scanner.next();
+		Pessoa pessoa = agenda.buscar(nome);
+		
+		if (pessoa != null) {
+			System.out.println("Nome: " + pessoa.getNome());
+			System.out.print("Contato: " + pessoa.getContato());
+		}else {
+			System.out.print("O nome informado não está na agenda");
 		}
 
-	}
+		
+	}		
 }

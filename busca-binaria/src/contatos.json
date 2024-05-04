@@ -24,8 +24,8 @@
   {"nome": "Lucas", "contato": "987456321"},
   {"nome": "Luciana", "contato": "963258147"},
   {"nome": "Luiza", "contato": "789123456"},
-  {"nome": "Mariana", "contato": "321654987"},
   {"nome": "Maria", "contato": "456123789"},
+  {"nome": "Mariana", "contato": "321654987"},
   {"nome": "Matheus", "contato": "789456123"},
   {"nome": "Mirella", "contato": "258147963"},
   {"nome": "Monique", "contato": "963258147"},
@@ -48,9 +48,5 @@
   {"nome": "Tatiana", "contato": "852741369"},
   {"nome": "Thaís", "contato": "159753486"},
   {"nome": "Thiago", "contato": "741258963"},
-  {"nome": "Vanessa", "contato": "369147852"},
-  {"nome": "Vinícius", "contato": "963147852"},
-  {"nome": "Vitor", "contato": "963741258"},
-  {"nome": "Yasmin", "contato": "147741852"}
-]
-}
+  {"nome": "Vanessa", "contato": "369147852"}
+]}
