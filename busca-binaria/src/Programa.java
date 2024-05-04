@@ -9,8 +9,9 @@ public class Programa {
 		Gson json = new Gson();
 		Agenda agenda = new Agenda();
 		
+		//  Pegando informações Json
 		try {
-			FileReader leitor = new FileReader("src/contatos.json");
+			FileReader leitor = new FileReader("src/contatos/contatos.json");
 			agenda = json.fromJson(leitor, Agenda.class);
 			leitor.close();
 		}
@@ -18,6 +19,7 @@ public class Programa {
 			System.out.print(e.getMessage());
 		}
 		
+		// Buscando
 		System.out.print("Buscar: ");
 		String nome = scanner.next();
 		Pessoa pessoa = agenda.buscar(nome);

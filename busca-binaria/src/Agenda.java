@@ -15,15 +15,14 @@ public class Agenda {
 	
 	public Pessoa buscar(String nome) {
 		
+		int menorIndex = 0;
+		int maiorIndex = contatos.size() - 1;
 		
-		int baixo = 0;
-		int alto = contatos.size() - 1;
-		
-		while(baixo <= alto) {
+		while(menorIndex <= maiorIndex) {
 			
-			int meio = (baixo+alto)/2;
+			int indexDoMeio = (menorIndex+maiorIndex)/2;
 			
-			Pessoa pessoa = contatos.get(meio);
+			Pessoa pessoa = contatos.get(indexDoMeio);
 			String nomeChute = pessoa.getNome();
 			int posicao = contatos.indexOf(pessoa);
 			
@@ -33,10 +32,10 @@ public class Agenda {
 				return pessoa;
 			}
 			else if(verificador < 0) {
-				alto = meio - 1;
+				maiorIndex = indexDoMeio - 1;
 			}
 			else if(verificador > 0){
-				baixo = meio + 1;
+				menorIndex = indexDoMeio + 1;
 			}
 		
 		}
