@@ -1,33 +1,50 @@
 public class Ordenador {
 
-    public static int buscarMenor(Integer[] array){
-            int menor = array[0];
-            int indexDoMenor = 0;
-            for (int i = 0; i < (array.length - 1); i++){
-                if (array[i] < menor){
-                    menor = array[i];
-                    indexDoMenor = i;
-                }
+    public static Integer buscarMenor(Integer[] array){
+        Integer menor = null;
+        int indexDoMenor = -1;
+
+        for (int i = 0; i < array.length; i++){
+            if(array[i] != null && (menor == null || array[i] < menor)){
+                menor = array[i];
+                indexDoMenor = i;
             }
+        }
+        if(indexDoMenor != -1)
             array[indexDoMenor] = null;
-            return menor;
+
+        return menor;
     }
 
-    public static int buscarMaior(Integer[] array){
-        int maior = array[0];
-        int indexDoMaior = 0;
-        for (int i = 0; i < (array.length - 1); i++){
-            if (array[i] > maior){
+    public static Integer buscarMaior(Integer[] array){
+        Integer maior = null;
+        int indexDoMaior = -1;
+
+        for (int i = 0; i < (array.length); i++){
+            if (array[i] != null && (maior == null || array[i] < maior)) {
                 maior = array[i];
                 indexDoMaior = i;
             }
         }
-        array[indexDoMaior] = null;
+        if(indexDoMaior != -1){
+            array[indexDoMaior] = null;
+        }
+
         return maior;
     }
 
-    //public static int ordenar(Integer[] array, int escolha){
-        //Integer[] arrayOrdenado = new Integer[array.length];
+    public static Integer[] ordenarArray(Integer[] array, String ordem){
+        Integer[] arrayOrdenado = new Integer[array.length];
 
-    //}
+        for(int i = 0; i < (array.length); i++){
+
+            if (ordem.equalsIgnoreCase("crescente")){
+                arrayOrdenado[i] = buscarMaior(array);
+            }
+            else if (ordem.equalsIgnoreCase("decrescente")){
+                arrayOrdenado[i] = buscarMenor(array);
+            }
+        }
+        return arrayOrdenado;
+    }
 }
