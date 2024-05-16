@@ -21,7 +21,7 @@ public class Ordenador {
         int indexDoMaior = -1;
 
         for (int i = 0; i < (array.length); i++){
-            if (array[i] != null && (maior == null || array[i] < maior)) {
+            if (array[i] != null && (maior == null || array[i] > maior)) {
                 maior = array[i];
                 indexDoMaior = i;
             }
@@ -38,10 +38,10 @@ public class Ordenador {
 
         for(int i = 0; i < (array.length); i++){
 
-            if (ordem.equalsIgnoreCase("crescente")){
+            if (ordem.equalsIgnoreCase("decrescente")){
                 arrayOrdenado[i] = buscarMaior(array);
             }
-            else if (ordem.equalsIgnoreCase("decrescente")){
+            else if (ordem.equalsIgnoreCase("crescente")){
                 arrayOrdenado[i] = buscarMenor(array);
             }
         }
