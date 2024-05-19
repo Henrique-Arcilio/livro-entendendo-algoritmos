@@ -4,15 +4,15 @@ public class QuickSort {
 
     public static ArrayList<Integer> ordenar(ArrayList<Integer> array ){
 
-        ArrayList<Integer> arrayOrdenado = new ArrayList<>();
-        ArrayList<Integer> arrayMenores = new ArrayList<>();
-        ArrayList<Integer> arrayMaiores = new ArrayList<>();
-
         if(array.size() < 2){
             return array;
         }
         else{
-            int pivo = array.get(0);
+            ArrayList<Integer> arrayOrdenado = new ArrayList<>();
+            ArrayList<Integer> arrayMenores = new ArrayList<>();
+            ArrayList<Integer> arrayMaiores = new ArrayList<>();
+            int pivo = array.getFirst();
+
             for(int i = 1; i < array.size(); i++){
 
                 if(array.get(i) < pivo){
