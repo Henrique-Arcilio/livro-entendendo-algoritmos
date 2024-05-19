@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 public class QuickSort {
+
     public static ArrayList<Integer> ordenar(ArrayList<Integer> array ){
 
         ArrayList<Integer> arrayOrdenado = new ArrayList<>();
