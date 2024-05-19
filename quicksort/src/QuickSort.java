@@ -12,11 +12,10 @@ public class QuickSort {
         else{
             int pivo = array.get(0);
             for(int i = 1; i < array.size(); i++){
+
                 if(array.get(i) < pivo){
                     arrayMenores.add(array.get(i));
-                }
-            }for (int i = 1; i < array.size(); i++){
-                if(array.get(i) > pivo){
+                }else{
                     arrayMaiores.add(array.get(i));
                 }
             }
